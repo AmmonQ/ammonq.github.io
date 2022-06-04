@@ -9,3 +9,9 @@
 img[data-enlargeable] {
     cursor: zoom-in;
 }
+
+.pure-g {
+    max-width: 45em;
+    margin-left: auto;
+    margin-right: auto;
+}
