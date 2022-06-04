@@ -15,3 +15,33 @@ img[data-enlargeable] {
     margin-left: auto;
     margin-right: auto;
 }
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.pure-menu {
+    background-color: #0E92F0;
+}
+
+.pure-menu-link {
+    color: black;
+}
+
+body {
+    background-color: #F1F1F7;
+}
+
+a {
+    color: #0E92F0;
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 2px #0E92F0 solid;
+}
+
+a:active {
+    color: #0241D9;
+    border-bottom: 2px #0241D9 solid;
+}
