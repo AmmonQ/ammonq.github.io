@@ -5,3 +5,7 @@
 .content {
     padding: 1em;
 }
+
+img[data-enlargeable] {
+    cursor: zoom-in;
+}

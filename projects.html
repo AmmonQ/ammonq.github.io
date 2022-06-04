@@ -5,6 +5,39 @@
         <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
         <link rel="stylesheet" href="styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function() {
+                $('img[data-enlargeable]').addClass('img-enlargeable').click(function() {
+                var src = $(this).attr('src');
+                var modal;
+
+                function removeModal() {
+                    modal.remove();
+                    $('body').off('keyup.modal-close');
+                }
+                modal = $('<div>').css({
+                    background: 'RGBA(0,0,0,.5) url(' + src + ') no-repeat center',
+                    backgroundSize: 'contain',
+                    width: '100%',
+                    height: '100%',
+                    position: 'fixed',
+                    zIndex: '10000',
+                    top: '0',
+                    left: '0',
+                    cursor: 'zoom-out'
+                }).click(function() {
+                    removeModal();
+                }).appendTo('body');
+                //handling ESC
+                    $('body').on('keyup.modal-close', function(e) {
+                        if (e.key === 'Escape') {
+                        removeModal();
+                        }
+                    });
+                });
+            });
+        </script>
     </head>
     <body>
         <div class="pure-menu pure-menu-horizontal">
@@ -29,6 +62,7 @@
                 </li>
             </ul>
         </div>
+
         <div class="content">
             <h2>Projects</h2>
             <div class="project_item">
@@ -47,7 +81,10 @@
                     GitHub Repositories: the <a href="https://github.com/AmmonQ/CS240FamilyMapServer">Java server</a>
                     and the <a href="https://github.com/AmmonQ/CS240-Family-Map-Client">android app</a>.
                 </p>
-                <p>I used <strong>Java</strong>, the <strong>Android SDK</strong>, <strong>IntelliJ IDEA</strong>, and <strong>Android Studio</strong></p>
+                <p>
+                    I used <strong>Java</strong>, the <strong>Android SDK</strong>, <strong>IntelliJ IDEA</strong>,
+                    <strong>Android Studio</strong>, and an <strong>SQLite</strong> database for this project.
+                </p>
             </div>
             <div class="project_item">
                 <h3>Datalog Interpreter</h3>
@@ -70,6 +107,14 @@
                     It also provides an organized way for the Lecture Prep staff to manage orders
                     from faculty.
                 </p>
+                <div class="pure-g">
+                    <div class="pure-u-1-2">
+                        <img data-enlargeable class="pure-img" src="images/lectureprep1.png" alt="Lecture prep main page" />
+                    </div>
+                    <div class="pure-u-1-2">
+                        <img data-enlargeable class="pure-img" src="images/lectureprep2.png" alt="Lecture prep checkout page" />
+                    </div>
+                </div>
                 <p>
                     I used <strong>Django</strong>, <strong>python</strong>, <strong>HTML</strong>, <strong>CSS</strong>,
                     <strong>JavaScript</strong>, and <strong>PyCharm</strong> to develop the website on a <strong>PostgreSQL</strong> database
