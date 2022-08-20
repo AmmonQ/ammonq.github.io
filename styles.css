@@ -26,6 +26,16 @@ body {
 
 .pure-menu-link {
     color: black;
+    padding: 1em;
+}
+
+.pure-menu-link:hover {
+    border-bottom: none;
+}
+
+.pure-menu-link:active {
+    color: black;
+    border-bottom: none;
 }
 
 body {
