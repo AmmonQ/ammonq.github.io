@@ -8,11 +8,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <div class="pure-menu pure-menu-horizontal">
+        <div class="custom-menu-wrapper">
+            <div class="pure-menu custom-menu custom-menu-top">
+                <a href="#" class="pure-menu-heading custom-menu-brand">Ammon's Portfolio</a>
+                <a href="#" class="custom-menu-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
+            </div>
+        <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
+            <div class="custom-menu-screen"></div>
             <ul class="pure-menu-list">
-                <li class="pure-menu-item">
-                    <a href="/index" class="pure-menu-link">Ammon's Portfolio</a>
-                </li>
                 <li class="pure-menu-item">
                     <a href="Ammon_s_Resume_08_20_2022_for_website.pdf" class="pure-menu-link">Resume</a>
                 </li>
@@ -30,9 +33,20 @@
                 </li>
             </ul>
         </div>
+        </div>
+        </div>
         <div class="content">
             This is my personal portfolio. I have information about some of the programming projects I have done, my volunteer experience, work experience, and education. 
             Feel free to contact me over <a href="https://www.linkedin.com/in/ammon-quackenbush/">LinkedIn</a>.
         </div>
+
+        <script>
+            (function (window, document) {
+            document.getElementById('toggle').addEventListener('click', function (e) {
+                document.getElementById('tuckedMenu').classList.toggle('custom-menu-tucked');
+                document.getElementById('toggle').classList.toggle('x');
+            });
+            })(this, this.document);
+        </script>
     </body>
 </html>
