@@ -1,51 +1,102 @@
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8">
-        <title>Ammon's Portfolio</title>
-        <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
-        <link rel="stylesheet" href="styles.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-        <div class="pure-menu pure-menu-horizontal">
-            <ul class="pure-menu-list">
-                <li class="pure-menu-item">
-                    <a href="/index" class="pure-menu-link">Ammon's Portfolio</a>
-                </li>
-                <li class="pure-menu-item">
-                    <a href="Ammon_s_Resume_08_20_2022_for_website.pdf" class="pure-menu-link">Resume</a>
-                </li>
-                <li class="pure-menu-item">
-                    <a href="volunteer.html" class="pure-menu-link">Volunteer Experience</a>
-                </li>
-                <li class="pure-menu-item">
-                    <a href="experience.html" class="pure-menu-link">Work Experience</a>
-                </li>
-                <li class="pure-menu-item">
-                    <a href="education.html" class="pure-menu-link">Education</a>
-                </li>
-                <li class="pure-menu-item">
-                    <a href="projects.html" class="pure-menu-link">Projects</a>
-                </li>
-            </ul>
-        </div>
-        <div class="content">
-            <h2>Volunteer Experience</h2>
-            <div class="volunteer_item">
-                <h3>Otgontenger University, Ulaanbaatar, Mongolia</h3>
-                <h5>Volunteer English Teacher: October 2018 - February 2020</h5>
-                <ul>
-                    <li>Taught spoken english to all levels of university students</li>
-                    <li>Performed service, including the Ger Project hosted by Brigham Young University and Deseret International Charities during 2019 summer
-                        (For more information, see the BYU Managment Society Asia Pacific article 
-                        <a href="https://www.byumsasia.org/voices---byu-ms-blog/byu-capstone-ger-project-mongolia">here</a> or 
-                        the BYU Magazine article <a href="https://magazine.byu.edu/article/a-ger-with-less-brr/">here</a>
-                    </li>
-                    <li>Technology support for DIC</li>
-                </ul>
-            </div>
-        </div>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ammon's Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/purecss@2.1.0/build/pure-min.css"
+      integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div class="custom-menu-wrapper">
+      <div class="pure-menu custom-menu custom-menu-top">
+        <a href="#" class="pure-menu-heading custom-menu-brand"
+          >Ammon's Portfolio</a
+        >
+        <a href="#" class="custom-menu-toggle" id="toggle"
+          ><s class="bar"></s><s class="bar"></s
+        ></a>
+      </div>
+      <div
+        class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked"
+        id="tuckedMenu"
+      >
+        <div class="custom-menu-screen"></div>
+        <ul class="pure-menu-list">
+          <li class="pure-menu-item">
+            <a href="/index" class="pure-menu-link">Ammon's Portfolio</a>
+          </li>
+          <li class="pure-menu-item">
+            <a
+              href="Ammon_s_Resume_08_20_2022_for_website.pdf"
+              class="pure-menu-link"
+              >Resume</a
+            >
+          </li>
+          <li class="pure-menu-item">
+            <a href="volunteer.html" class="pure-menu-link"
+              >Volunteer Experience</a
+            >
+          </li>
+          <li class="pure-menu-item">
+            <a href="experience.html" class="pure-menu-link">Work Experience</a>
+          </li>
+          <li class="pure-menu-item">
+            <a href="education.html" class="pure-menu-link">Education</a>
+          </li>
+          <li class="pure-menu-item">
+            <a href="projects.html" class="pure-menu-link">Projects</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content">
+      <h2>Volunteer Experience</h2>
+      <div class="volunteer_item">
+        <h3>Otgontenger University, Ulaanbaatar, Mongolia</h3>
+        <h5>Volunteer English Teacher: October 2018 - February 2020</h5>
+        <ul>
+          <li>Taught spoken english to all levels of university students</li>
+          <li>
+            Performed service, including the Ger Project hosted by Brigham Young
+            University and Deseret International Charities during 2019 summer
+            (For more information, see the BYU Managment Society Asia Pacific
+            article
+            <a
+              href="https://www.byumsasia.org/voices---byu-ms-blog/byu-capstone-ger-project-mongolia"
+              >here</a
+            >
+            or the BYU Magazine article
+            <a href="https://magazine.byu.edu/article/a-ger-with-less-brr/"
+              >here</a
+            >
+          </li>
+          <li>Technology support for DIC</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      (function (window, document) {
+        document
+          .getElementById("toggle")
+          .addEventListener("click", function (e) {
+            document
+              .getElementById("tuckedMenu")
+              .classList.toggle("custom-menu-tucked");
+            document.getElementById("toggle").classList.toggle("x");
+          });
+      })(this, this.document);
+    </script>
+  </body>
 </html>
