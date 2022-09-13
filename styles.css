@@ -56,6 +56,14 @@ a:active {
     border-bottom: 2px #0241D9 solid;
 }
 
+.custom-menu-brand:hover {
+    border-bottom: none;
+}
+
+.custom-menu-brand:active {
+    border-bottom: none;
+}
+
 /* testing styles */
 
 .custom-menu-wrapper {
