@@ -1,3 +1,7 @@
+#tuckedMenu {
+    border-top: 0;
+}
+
 *.pure-menu-item {
     height: inherit;
 }
